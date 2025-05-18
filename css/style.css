@@ -1,0 +1,101 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f1f1f1;
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+section{
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    box-shadow:  0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+section h1{
+    color: brown;
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+section h2{
+    color: white;
+    margin-bottom: 15px;
+}
+section p{
+    color: rgb(79, 17, 17);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+section div:nth-child(1),
+section div.formulaire{
+    border-radius: 4px;
+    padding: 20px;
+}
+
+section div.formulaire{
+    background-color: brown;
+}
+
+label{
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color:#f1f1f1;
+}
+input{
+    display: inline-block;
+    width: 100%;
+    padding: 6px 12px;
+    margin-bottom: 6px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    box-shadow: 0 0 1px black;
+}
+button{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+button:active{
+    outline: 2px solid black;
+    outline-offset: 1px;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        display: block;
+    }
+    section{
+        height: auto;
+        display: block;
+    }
+
+    section div:nth-child(1),
+    section div.formulaire{
+        height: 250px;
+        border-radius: 0;
+        padding: 20px;
+    }
+}
